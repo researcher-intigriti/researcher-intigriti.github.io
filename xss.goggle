@@ -1,0 +1,6 @@
+! name: <img src=x onerror=window.__goggleXSS=1>
+! description: <img src=x onerror=window.__goggleXSS=2>
+! public: false
+! author: <img src=x onerror=window.__goggleXSS=3>
+
+/test
