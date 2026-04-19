@@ -1,0 +1,8 @@
+! name: HOMEJS2
+! description: home link js test
+! public: false
+! author: authorjs
+! homepage: javascript:window.__goggleXSS=4
+! issues: javascript:window.__goggleXSS=5
+
+/test
