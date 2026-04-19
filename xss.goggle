@@ -1,6 +1,8 @@
-! name: <img src=x onerror=window.__goggleXSS=1>
-! description: <img src=x onerror=window.__goggleXSS=2>
+! name: HOMEJS
+! description: home link js test
 ! public: false
-! author: <img src=x onerror=window.__goggleXSS=3>
+! author: authorjs
+! homepage: javascript:window.__goggleXSS=4
+! issues: javascript:window.__goggleXSS=5
 
 /test
