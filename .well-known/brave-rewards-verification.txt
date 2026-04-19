@@ -1,0 +1,5 @@
+This is a Brave Creators publisher verification file.
+
+Domain: researcher-intigriti.github.io
+Token: 1d2a6c2ae132eedda9dab9969a73a720ee19a1bb7db75c1d4f904672c5efbe9d
+
