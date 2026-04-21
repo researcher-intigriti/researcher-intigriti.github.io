@@ -1,4 +1,4 @@
 This is a Brave Creators publisher verification file.
 
 Domain: researcher-intigriti.github.io
-Token: 868741926e96ed89f527c1fc9ac6c8b9c5b0636416855471b24e825659a2c2bd
+Token: 067c4cd7fade751ef9fa73f80fd90ccb017486ae44098dad20a4ad3f42e7fb7a
