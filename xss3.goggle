@@ -1,0 +1,7 @@
+! name: <img src=x onerror=window.__goggleXSS=1>
+! description: <svg/onload=window.__goggleXSS=2>
+! public: true
+! author: <img src=x onerror=window.__goggleXSS=3>
+! avatar: #9244e0
+
+$boost=1,site=example.com
