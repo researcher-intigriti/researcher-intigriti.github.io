@@ -1,0 +1,8 @@
+! name: JS homepage canary 1779100000
+! description: Tests javascript URL handling in Goggle homepage metadata
+! public: false
+! author: researcher-intigriti
+! homepage: javascript:window.__goggleHomeXSS=1779100000
+! avatar: #9244e0
+
+$boost=1,site=example.com
