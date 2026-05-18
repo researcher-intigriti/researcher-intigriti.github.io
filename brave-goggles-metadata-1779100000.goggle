@@ -1,0 +1,9 @@
+! name: Metadata URL SSRF canary 1779100000
+! description: Tests whether optional Goggle metadata URLs are fetched
+! public: false
+! author: researcher-intigriti
+! homepage: https://webhook.site/70a01980-3159-4573-98d7-c372dce14d99/goggles-meta-home-1779100000
+! issues: https://webhook.site/70a01980-3159-4573-98d7-c372dce14d99/goggles-meta-issues-1779100000
+! avatar: #9244e0
+
+$boost=1,site=example.com
