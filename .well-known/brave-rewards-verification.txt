@@ -1,1 +1,4 @@
-brave-ledger-verification=93c46dc96ea695e827c1219433aa2bcbe10f8528f0fbf07ce8bd032269213826
+This is a Brave Creators publisher verification file.
+
+Domain: researcher-intigriti.github.io
+Token: 93c46dc96ea695e827c1219433aa2bcbe10f8528f0fbf07ce8bd032269213826
